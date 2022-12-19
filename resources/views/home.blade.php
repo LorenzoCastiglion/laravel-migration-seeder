@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-@if(Route::currentRouteName() == 'home')
-    <a class="border border-1 p-3 " href="{{route('filtered')}}">Visualizza i treni in partenza oggi</a>
-@else
-    <a class="border border-1 p-3 " href="{{route('home')}}">Visualizza tutti i treni</a>
-@endif
+<div class="text-center bottone">
+    @if(Route::currentRouteName() == 'home')
+        <a class="border border-1 p-3 text-decoration-none " href="{{route('filtered')}}">Visualizza i treni in partenza oggi</a>
+    @else
+        <a class="border border-1 p-3 text-decoration-none " href="{{route('home')}}">Visualizza tutti i treni</a>
+    @endif
+</div>
 <table class="table mt-4">
     <thead class="bg-warning ">
     <tr>
