@@ -13,7 +13,8 @@ class PageController extends Controller
         return view('home', compact('trains'));
     }
     public function filtered(){
-        $trains = Train::all()->where('data_partenza', '2021-05-11'); 
+        $trains = Train::all()->where('data_partenza', today()->toDateString());
+        
         return view('home', compact('trains'));
     }
 }

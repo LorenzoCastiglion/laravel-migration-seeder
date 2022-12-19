@@ -27,7 +27,7 @@ class TrainSeeder extends Seeder
             $newtrains->n_carrozza = $faker->randomDigit();
             $newtrains->in_orario = $faker->boolean();
             $newtrains->cancellato = $faker->boolean();
-            $newtrains->data_partenza = $faker->date();
+            $newtrains->data_partenza = $faker->dateTimeBetween('-1 week',  'now');
             $newtrains->save();
         }
     }
