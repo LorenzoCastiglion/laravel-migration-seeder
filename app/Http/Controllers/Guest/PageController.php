@@ -10,6 +10,10 @@ class PageController extends Controller
 {
     public function index(){
         $trains = Train::all();
-        return view('layouts.app', compact('trains'));
+        return view('home', compact('trains'));
+    }
+    public function filtered(){
+        $trains = Train::all()->where('data_partenza', '2021-05-11'); 
+        return view('home', compact('trains'));
     }
 }

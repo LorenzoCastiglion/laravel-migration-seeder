@@ -18,23 +18,7 @@
 <body>
 
     <main>
-     @foreach ($trains as $train)
-
-     <div class="card mb-3">
-        <div class="card-header">{{ $train->stazione_di_arrivo }}</div>
-        <div class="card-body">
-            <div>
-                <p>Partenza:{{ $train->ora_di_arrivo }}</p>
-                <p> <small> Arrivo:{{ $train->ora_di_arrivo }}</small></p>
-
-
-                
-            </div>
-            
-        </div>
-    </div>
-         
-     @endforeach
+     @yield('content')
     </main>
 
 </body>
